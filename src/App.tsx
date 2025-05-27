@@ -1,4 +1,5 @@
 import { menuItems } from "./data/db"
+import MenuItem from "./components/MenuItem";
 
 function App() {
   console.log(menuItems);
@@ -13,6 +14,11 @@ function App() {
 
         <div>
           <h2>menu</h2>
+          {menuItems.map(item => 
+            <MenuItem 
+              key={item.id}
+            />
+          )}
         </div>
 
         <div>
